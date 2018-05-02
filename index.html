@@ -31,14 +31,15 @@
     </section>
 
     <section>
-      <form onsubmit="app.controllers.houseController.addHouse(event)">
+      <form onsubmit="app.controllers.HouseController.addHouse(event)">
         <input type="text" name="address" placeholder="address">
         <input type="text" name="city" placeholder="city">
-        <input type="number" name="state" placeholder="state">
+        <input type="text" name="state" placeholder="state">
+        <input type="number" name="zipcode" placeholder="zipcode">
         <input type="number" name="bedroom" placeholder="bedrooms">
-        <input type="number" name="bathroom" placeholder="bathrooms">
+        <input type="number" name="baths" placeholder="bathrooms">
         <input type="number" name="price" placeholder="price">
-        <input type="number" name="lotsize" placeholder="lotsize">
+        <input type="text" name="lotsize" placeholder="lotsize">
         <input type="url" name="img" placeholder="Image">
         <button type="submit">SUBMIT</button>
       </form>

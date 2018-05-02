@@ -5,11 +5,11 @@ function HouseController(){
 var houseService = new HouseService()
 
 
-function drawHouse(){
- var house = houseService.getHouses()
+function drawHouses(){
+ var houses = houseService.getHouses()
     var template = ``
     for (let i = 0; i < houses.length; i++){
-        var house = house[i];
+        var house = houses[i];
         template += `
         <div>
         <img src="${house.img}" alt="">
@@ -26,7 +26,7 @@ function drawHouse(){
     }
     document.getElementById('house').innerHTML = template
 }
- drawHouse()
+ drawHouses()
 
 //public
 
@@ -40,12 +40,12 @@ this.addHouse = function addHouse(e){
         state: data.state.value,
         zipcode: data.zipcode.value,
         bedroom: data.bedroom.value,
-        bath: data.bath.value,
+        baths: data.baths.value,
         price: data.price.value,
         lotsize: data.lotsize.value
     }
     houseService.addHouse(newHouse)
-    drawHouse()
+    drawHouses()
 }
 
 }

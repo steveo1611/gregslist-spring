@@ -24,14 +24,9 @@ var badHouse = new House('https://heidijeanwatson.files.wordpress.com/2014/02/po
 houses.push(niceHouse, normalHouse, badHouse)
 
 
-
-
-
-
-
 //public
 
-this.getHouse = function getHouse(){
+this.getHouses = function getHouses(){
     return JSON.parse(JSON.stringify(houses))
 }
 
@@ -39,14 +34,6 @@ this.addHouse = function addHouse(house){
     var newHouse = new House(house.img, house.address, house.city, house.state, house.zipcode, house.bedroom, house.baths, house.price, house.lotsize)
     houses.push(newHouse)
 }
-
-
-
-
-
-
-
-
 
 
 
